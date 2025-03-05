@@ -1,7 +1,7 @@
 restaurant_tables2 = [
     [0,        'T1(2)',  'T2(4)',  'T3(2)',  'T4(6)',  'T5(4)',  'T6(2)'],
     [1,        'x',      'x',      'o',      'o',      'o',      'x'],
-    [2,        'x',      'x',      'o',      'o',      'x',      'o'],
+    [2,        'o',      'x',      'o',      'o',      'x',      'o'],
     [3,        'x',      'x',      'o',      'x',      'o',      'o'],
     [4,        'x',      'x',      'o',      'x',      'o',      'x'],
     [5,        'o',      'x',      'o',      'x',      'o',      'o'],
@@ -25,35 +25,58 @@ def free_tables(tables):
     # Table are the ROWS 
     # I had to do multiple for loops because I couldn't figure out how to get nested loops to work...
     # Instead I just checked every column using indexes seperately
+    t1 = 0
+    t2 = 0 
+    t3 = 0
+    t4 = 0
+    t5 = 0 
+    t6 = 0
     for table in tables[1:]:
-            if table[1] == "o":
+        if table[1] == "o":
+            t1 += 1 
+            if t1 >= 2:
                 print("table 1 is free")
                 break
 
     for table in tables[1:]:
         if table[2] == "o":
-            print("Table 2 is free")
-            break
+            t2 += 1 
+            if t2 >= 4:
+                print("table 2 is free")
+                break
+
 
     for table in tables[1:]:
         if table[3] == "o":
-            print("Table 3 is free")
-            break
+            t3 += 1 
+            if t3 >= 2:
+                print("table 3 is free")
+                break
+
 
     for table in tables[1:]:
         if table[4] == "o":
-            print("Table 4 is free")
-            break
+            t4 += 1 
+            if t4 >= 6:
+                print("table 4 is free")
+                break
+
     
     for table in tables[1:]:
         if table[5] == "o":
-            print("Table 5 is free")
-            break
+            t5 += 1 
+            if t5 >= 4:
+                print("table 5 is free")
+                break
+
     
     for table in tables[1:]:
         if table[6] == "o":
-            print("Table 6 is free")
-            break
+            t6 += 1 
+            if t6 >= 2:
+                print("table 6 is free")
+                break
+
 
 free_tables(restaurant_tables2)
 #This was the lvl 1 test
