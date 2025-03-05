@@ -17,7 +17,6 @@ restaurant_tables2 = [
 
 # work through columns by calling each list in every index
 # Make a list to keep track of all tables that are free
-def free_tables(tables):
 
     # https://www.w3schools.com/python/python_strings_slicing.asp 
     # Used this code to figure out how to start from the 2nd row instead of the first row the [:1]
@@ -25,12 +24,16 @@ def free_tables(tables):
     # Table are the ROWS 
     # I had to do multiple for loops because I couldn't figure out how to get nested loops to work...
     # Instead I just checked every column using indexes seperately
+
+def free_tables(tables):
+    # Table counters
     t1 = 0
     t2 = 0 
     t3 = 0
     t4 = 0
     t5 = 0 
     t6 = 0
+    #Loops
     for table in tables[1:]:
         if table[1] == "o":
             t1 += 1 
@@ -89,11 +92,11 @@ free_tables(restaurant_tables2)
 # Has to make sure that the table is free and has the party size available
 
 #def partysize(size, table):
-# loop to iterate through tables that have the same party size in parenthesis
+# loop to iterate through tables that have the same party size in the parameter
+#   table_counter = 0
 #   if the tables[0] has f"({size})"
-#       table_counter = 0
-#       for i in range size:
-#           loop through the the column and add counter whenevr a table is free
+#       for table in range tables[1:]:
+#           loop through the the column and add counter whenever a table is free
 #           break; if one is found then return the table that's free
 
 
