@@ -24,7 +24,7 @@ def free_tables(tables):
     
     # Table are the ROWS 
     # I had to do multiple for loops because I couldn't figure out how to get nested loops to work...
-    # Instead I just checked ever column using indexes seperately
+    # Instead I just checked every column using indexes seperately
     for table in tables[1:]:
             if table[1] == "o":
                 print("table 1 is free")
@@ -64,3 +64,37 @@ free_tables(restaurant_tables2)
 
 #Write code that checks the party size
 # Has to make sure that the table is free and has the party size available
+
+#def partysize(size, table):
+# loop to iterate through tables that have the same party size in parenthesis
+#   if the tables[0] has f"({size})"
+#       table_counter = 0
+#       for i in range size:
+#           loop through the the column and add counter whenevr a table is free
+#           break; if one is found then return the table that's free
+
+
+
+
+
+# LEVEL 3
+
+# Similar code to level two
+
+# def multiparty(size, table):
+# create and empty list to hold the list of tables
+# use the same structure in def partysize
+# instead of return every table that's free, you have to .append the table to the empty list
+# After the nested loops finish iterating through all tables
+# return the list of tables
+
+
+
+
+# LEVEL 4
+
+#def adjacent table(size, table):
+# Same logic used before to check for available tables
+# If the table is Not free, iterate through the nearby table
+# If the table rows both have 'o', add that to the counter
+# if the counter is equal to the size, return both tables that are free.
