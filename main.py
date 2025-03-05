@@ -96,8 +96,9 @@ free_tables(restaurant_tables2)
 #   table_counter = 0
 #   if the tables[0] has f"({size})"
 #       for table in range tables[1:]:
-#           loop through the the column and add counter whenever a table is free
-#           break; if one is found then return the table that's free
+#           loop through the the column and add counter whenever a seat is free
+#           move over to the next one if it's not free
+#           break; if one is found then return the table that's free; returning should exit the method
 
 
 
